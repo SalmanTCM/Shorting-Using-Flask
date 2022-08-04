@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style>
+          th , td{
+              padding:10px 10px;
+              border-style: solid;
+  
+}
+    </style>
+</head>
+<body>
+ <table>
+     <tr>
+         <th>id</th>
+          {% for i in range(12)%}
+         <th>{{i+1}}</th>
+         {%endfor%}
+         <th>Total</th>
+     </tr>
+      <tr>
+         {% for key in li %}
+
+          <tr>
+          <td>{{key}}</td>
+       {% for mark in d[key]%}
+         <td>{{mark }}</td>
+       {%endfor%}
+     </tr>
+
+         {%endfor%}
+     </tr>
+ </table>
+
+<p>Total student List: {{ count}}</p>
+</body>
+</html>
